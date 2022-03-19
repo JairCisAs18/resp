@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+:root{
+    --color: white;
+}
+#header{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+#header > p{
+    color: var(--color);
+    font-size: 8em;
+    margin-left: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#header > form{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+input{
+    background: transparent;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    border-color: gray;
+    border-style: groove;
+}
+#container{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ul{
+    list-style: none;
+    background-color: black;
+    margin-left: 0;
+    max-width: 100%;
+}
+li{
+    color: var(--color);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+#content{
+    background-color: var(--color);
+    width: 1200px;
+    padding: 15px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+}
+#content > p{
+    margin-top: 0;
+}
+#section1{
+    width: 30%;
+    border-left: 15px solid red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#section2{
+    width: 30%;
+    border-left:15px solid green;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#section3{
+    width: 30%;
+    border-left: 15px solid blue;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#name > h5{
+    color: var(--color);
+    text-transform: uppercase;
+    font-size: 25px;
+}
+div[id^="section"] > h3{
+     margin-bottom: 0;
+}
+div[id^="section"] > p{
+    margin-top: 0;
+}
+h5::before{
+    content: "{{";
+}
+h5::after{
+    content: "}}";
+}
+@media (max-width: 480px){
+    #header > p{
+        height: 0.2vh;
+        color: var(--color);
+        font-size: 1.5em;
+        margin-left: 9vw;
+        margin-top: 3vh;
+        margin-bottom: 50px;
+    }
+    #header > form{
+        margin-right: 12vw;
+    }
+    input{
+        height: 3vh;
+        width: 35vw;
+        border-color: gray;
+        border-style: groove;
+    }
+    #list{
+        order: 2;
+        height: 6vh;
+    }
+    ul{
+        width: 80vw;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        font-size: 15px;
+    }
+    #content{
+        width: 100vw;
+        padding: 10px;
+        order: 1;
+    }
+    #section1{
+        width: 100%;
+        background-color: red;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    #section2{
+        width: 100%;
+        background-color: green;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    #section3{
+        width: 100%;
+        border: none;
+        background-color: blue;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div[id^="section"] > h3{
+        color: var(--color);
+        margin-top: 0;
+    }
+    div[id^="section"] > p{
+       color: var(--color);
+       margin-bottom: 0;
+    }
+    #name{
+        order: 3;
+    }
+    #name > h5{
+        font-size: 11px;
+    } 
+}
